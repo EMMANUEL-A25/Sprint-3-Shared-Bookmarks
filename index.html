@@ -1,8 +1,85 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-  </body>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shared Bookmarks</title>
+</head>
+<body>
+  <header>
+    <h1>📘 Shared Bookmarks</h1>
+    <p>Save and share useful links with other developers.</p>
+  </header>
+
+  <main>
+    <!-- User selection section -->
+    <section aria-labelledby="user-section">
+      <h2 id="user-section">Select a User</h2>
+      <label for="user-select">Choose a user:</label>
+      <select id="user-select" name="userSelect" aria-label="User Selection">
+        <!-- Options added dynamically via JavaScript -->
+      </select>
+    </section>
+
+    <hr />
+
+    <!-- Bookmark list section -->
+    <section aria-labelledby="bookmark-section">
+      <h2 id="bookmark-section">Bookmarks</h2>
+      <div id="bookmarksContainer" role="region" aria-live="polite">
+        <!-- Bookmarks will be dynamically added here -->
+        <p>No user selected.</p>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- New bookmark form -->
+    <section aria-labelledby="add-section">
+      <h2 id="add-section">Add a New Bookmark</h2>
+      <form id="bookmarkForm">
+        <div>
+          <label for="urlInput">URL:</label>
+          <input
+            type="url"
+            id="urlInput"
+            name="url"
+            placeholder="https://example.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="titleInput">Title:</label>
+          <input
+            type="text"
+            id="titleInput"
+            name="title"
+            placeholder="Enter title"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="descInput">Description:</label>
+          <textarea
+            id="descInput"
+            name="description"
+            rows="4"
+            placeholder="Why is this bookmark useful?"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Add Bookmark</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Sprint 3 - Shared Bookmarks Project</p>
+  </footer>
+
+  <script type="module" src="./script.js"></script>
+</body>
 </html>
