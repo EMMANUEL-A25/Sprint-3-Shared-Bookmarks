@@ -26,7 +26,7 @@ export function isDuplicate(bookmarks, url) {
 }
 
 /**
- Example utility function: get all titles from bookmarks
+ get all titles from bookmarks
  @param {Array} bookmarks
  @returns {Array} list of titles
  */
