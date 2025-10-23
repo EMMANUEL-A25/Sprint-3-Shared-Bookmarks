@@ -26,8 +26,12 @@
     <!-- Bookmark list section -->
     <section aria-labelledby="bookmark-section">
       <h2 id="bookmark-section">Bookmarks</h2>
-      <div id="bookmarksContainer" role="region" aria-live="polite">
-        <!-- Bookmarks will be dynamically added here -->
+      <div 
+        id="bookmarksContainer" 
+        role="region" 
+        aria-live="polite" 
+        aria-label="List of bookmarks for the selected user"
+      >
         <p>No user selected.</p>
       </div>
     </section>
@@ -37,42 +41,56 @@
     <!-- New bookmark form -->
     <section aria-labelledby="add-section">
       <h2 id="add-section">Add a New Bookmark</h2>
-      <form id="bookmarkForm">
+
+      <form id="bookmarkForm" aria-describedby="form-instructions">
+        <p id="form-instructions">
+          Fill in all fields and press Enter (or Shift+Enter for newlines in description) or click "Add Bookmark" to save.
+        </p>
+
         <div>
           <label for="urlInput">URL:</label>
-          <input
-            type="url"
-            id="urlInput"
-            name="url"
-            placeholder="https://example.com"
-            required
+          <input 
+            type="url" 
+            id="urlInput" 
+            name="url" 
+            placeholder="https://example.com" 
+            required 
+            aria-required="true" 
           />
         </div>
 
         <div>
           <label for="titleInput">Title:</label>
-          <input
-            type="text"
-            id="titleInput"
-            name="title"
-            placeholder="Enter title"
-            required
+          <input 
+            type="text" 
+            id="titleInput" 
+            name="title" 
+            placeholder="Enter title" 
+            required 
+            aria-required="true" 
           />
         </div>
 
         <div>
           <label for="descInput">Description:</label>
-          <textarea
-            id="descInput"
-            name="description"
-            rows="4"
-            placeholder="Why is this bookmark useful?"
-            required
+          <textarea 
+            id="descInput" 
+            name="description" 
+            rows="4" 
+            placeholder="Why is this bookmark useful?" 
+            required 
+            aria-required="true"
           ></textarea>
         </div>
 
         <button type="submit">Add Bookmark</button>
       </form>
+
+      <!-- Feedback message -->
+      <p id="feedbackMessage" role="status" aria-live="polite"></p>
+
+      <!-- Clear bookmarks button -->
+      <button id="clearBookmarksButton">Clear Bookmarks for Selected User</button>
     </section>
   </main>
 
@@ -80,6 +98,8 @@
     <p>Sprint 3 - Shared Bookmarks Project</p>
   </footer>
 
+  <!-- Scripts -->
   <script type="module" src="./script.js"></script>
+  <link rel="stylesheet" href="./style.css" />
 </body>
 </html>

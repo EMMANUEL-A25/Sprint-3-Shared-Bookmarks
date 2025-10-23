@@ -1,10 +1,11 @@
-{
+ {
   "name": "sprint-3-shared-bookmarks",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "bookmarks.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
