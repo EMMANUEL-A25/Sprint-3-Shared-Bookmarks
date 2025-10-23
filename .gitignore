@@ -1,0 +1,16 @@
+# Node dependencies
+node_modules/
+
+# Build and test outputs
+coverage/
+dist/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# System or editor settings
+.vscode/
+.DS_Store

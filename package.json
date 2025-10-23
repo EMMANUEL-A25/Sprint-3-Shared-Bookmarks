@@ -1,0 +1,23 @@
+{
+  "name": "sprint-3-shared-bookmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bookmarks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EMMANUEL-A25/Sprint-3-Shared-Bookmarks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EMMANUEL-A25/Sprint-3-Shared-Bookmarks/issues"
+  },
+  "homepage": "https://github.com/EMMANUEL-A25/Sprint-3-Shared-Bookmarks#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
