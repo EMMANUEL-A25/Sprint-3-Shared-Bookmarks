@@ -1,4 +1,4 @@
- {
+{
   "name": "sprint-3-shared-bookmarks",
   "version": "1.0.0",
   "type": "module",
@@ -20,5 +20,8 @@
   "homepage": "https://github.com/EMMANUEL-A25/Sprint-3-Shared-Bookmarks#readme",
   "devDependencies": {
     "jest": "^30.2.0"
+  },
+  "dependencies": {
+    "jsdom": "^27.0.1"
   }
 }

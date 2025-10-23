@@ -1,5 +1,6 @@
- // bookmarks.js
+// bookmarks.js
 import { getUserIds, getData, setData } from "./storage.js";
+import { createBookmark, isDuplicate } from "./utils.js"; // import logic functions
 
 // Populate User Dropdown
 export function populateUserDropdown(selectElement) {
@@ -70,14 +71,15 @@ export function handleAddBookmark() {
     return;
   }
 
-  const newBookmark = {
-    title,
-    url,
-    description,
-    timestamp: new Date().toISOString(),
-  };
-
   const currentData = getData(userId) || [];
+
+  if (isDuplicate(currentData, url)) {
+    alert("This bookmark URL already exists for this user!");
+    return;
+  }
+
+  const newBookmark = createBookmark(title, url, description);
+
   currentData.push(newBookmark);
   setData(userId, currentData);
 
